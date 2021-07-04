@@ -1,20 +1,36 @@
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-public class Task_List {
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Task_List implements ActionListener{
+
+	//GUI
+	static GUI newGUI = new GUI();
+	//JFrame frame;
+	//JPanel panel;
 	
+	//Logic
 	static Scanner kbd = new Scanner(System.in);   //keyboard scanner
 	static ArrayList<String> Tasks = new ArrayList<String>();
 	static String input;
 	
+	
 	public static void main(String[] args) {
-
-		PrintHeader();
+		
+		//new GUI();
 		ReadFile();
-		Print();
+		newGUI.displayTasks(Tasks);
 		
 		while (true)  {
 			input = kbd.nextLine();
@@ -69,6 +85,7 @@ public class Task_List {
 		}
 	}
 	
+	
 	public static boolean IsNumber(String value) {
 		
 		try {
@@ -81,7 +98,7 @@ public class Task_List {
 	}
 	
 	public static void PrintHeader() {
-		System.out.print("\n~ Your To-Do List ~ \t\t For a list of commands, type '/help' \n-------------------");
+		System.out.println("\n~ Your To-Do List ~ \t\t For a list of commands, type '/help' \n-------------------");
 	}
 	
 	public final static void ClearConsole()
@@ -244,4 +261,13 @@ public class Task_List {
 
 	    }
 	  }
+
+	
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 }
