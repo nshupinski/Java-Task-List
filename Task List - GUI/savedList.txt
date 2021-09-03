@@ -1,3 +1,4 @@
-Work out
-Be Sad
-Find a house
+Main|Find a job,Pet Bacon!!!,
+Completed|Find an apartment,Take out the trash,
+Projects|Finish Task_List,Personal Website,
+idk|
